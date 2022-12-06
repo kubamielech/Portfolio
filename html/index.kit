@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Mielech | Front-end Developer & UX/UI Designer</title>
+    <link rel="shortcut icon" href="./dist/img/m-logo-white.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9db5957d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+
+    <!-- @import 'nav.kit' -->
+
+    <header class="header">
+        <div class="header__box wrapper">
+            <div class="header__text-box">
+                <h1 class="header__title">Front-end Developer</h1>
+                <p class="header__text">Tworzę profesjonalne i dobrze zoptymalizowane strony internetowe.</p>
+            </div>
+            <div class="header__img-box">
+                <img src="./dist/img/funny.png" alt="" class="header__img">
+            </div>
+            <div class="header__text-box header__text-box--two">
+                <h1 class="header__title header__title--two">UI/UX Designer</h1>
+                <p class="header__text header__text--two">Projektuje nowoczesne i świetnie wyglądające strony internetowe.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about" id="about">
+            <div class="about__box wrapper">
+                <div class="about__text-box">
+                    <p class="about__title">Cześć!</p>
+                    <p class="about__subtitle">Mam na imię Kuba i jestem Front-end Developerem i UI/UX Designerem.</p>
+                    <p class="about__text">Od 2021 roku rozwijam swoją pasję jaką jest tworzenie stron internetowych. Pisanie kodu, a następnie podziwianie owoców mojej pracy sprawia mi ogromną przyjemność, dlatego mogę nazwać to moją pasją. Do tej pory oponowałem języki HTML, CSS, SASS i JS. Aktualnie uczę się korzystania z biblioteki jaką jest React.</p>
+                    <a href="#contact" class="about__btn">Skontaktuj się</a>
+                </div>
+                <div class="about__img-box">
+                    <img src="./dist/img/okay.png" alt="" class="about__img">
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio__box wrapper">
+                <div class="portfolio__text-box">
+                    <div class="portfolio__bar"></div>
+                    <h2 class="portfolio__title">moje ostatnie projekty</h2>
+                    <div class="portfolio__bar"></div>
+                </div>
+                <div class="portfolio__items">
+                    <div class="portfolio__item">
+                        <div class="portfolio__item-img"></div>
+                        <div class="portfolio__item-text-box">
+                            <p class="portfolio__item-title">My Study Buddy</p>
+                            <p class="portfolio__item-text">React project</p>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__item-img"></div>
+                        <div class="portfolio__item-text-box">
+                            <p class="portfolio__item-title">Diamonds, Gold & Money</p>
+                            <p class="portfolio__item-text">Grid project</p>
+                        </div>
+                    </div>
+                    <div class="portfolio__item">
+                        <div class="portfolio__item-img"></div>
+                        <div class="portfolio__item-text-box">
+                            <p class="portfolio__item-title">Tropical Paradise</p>
+                            <p class="portfolio__item-text">Flexbox project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact__box wrapper">
+                <div class="contact__text-box">
+                    <h2 class="contact__title">Skontaktuj się</h2>
+                    <p class="contact__subtitle">Masz jakieś pytanie? Po prostu napisz do mnie!</p>
+                </div>
+                <div class="contact__info-box">
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Informacje kontaktowe</h3>
+                        <p class="contact__info-subtitle">Napisz do mnie bezpośrednio lub skorzystaj z formularza kontaktowego.</p>
+                        <div class="contact__info-items">
+                            <p class="contact__info-text"><i class="fa-solid fa-phone"></i> +48 123 456 789</p>
+                            <p class="contact__info-text"><i class="fa-sharp fa-solid fa-envelope"></i> <a href="mailto:kubamielech4@gmail.com" class="contact__info-link">kubamielech4@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__form-box">
+                        <form action="/action_page.php" class="contact__form">
+                            <label for="fname" class="contact__form-label">Imię</label>
+                            <input type="text" id="fname" name="fname" class="contact__form-input">
+                            <label for="email">Adres e-mail</label>
+                            <input type="text" id="email" name="email" class="contact__form-input">
+                            <label for="msg" class="contact__form-label">Wiadomość</label>
+                            <textarea name="msg" id="msg" cols="30" rows="10" class="contact__form-text"></textarea>
+                            <!-- <label for="atch" class="contact__form-label">Załącznik</label> -->
+                            <input type="file" id="atch" name="arch" class="contact__form-input">
+                            <input type="submit" value="Wyślij" class="contact__form-btn">
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- @import 'footer.kit' -->
+
+    <script src="./dist/js/index.min.js"></script>
+</body>
+
+</html>

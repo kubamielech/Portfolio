@@ -1,0 +1,30 @@
+@media (min-width: 1200px) {
+    .header {
+        &__text-box {
+            max-width: 400px;
+        }
+
+        &__title {
+            font-size: 3.6rem;
+        }
+    }
+
+    .portfolio {
+
+        &__text-box {
+            justify-content: space-between;
+        }
+
+        &__items {
+            justify-content: space-between;
+        }
+
+        &__item {
+            margin: 1em 0;
+        }
+
+        &__bar {
+            display: flex;
+        }
+    }
+}

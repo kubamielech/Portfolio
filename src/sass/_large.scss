@@ -1,0 +1,132 @@
+@media (min-width: 992px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navbar {
+        &__mobile {
+            display: none;
+        }
+
+        &__desktop {
+            display: flex;
+            align-items: center;
+        }
+
+        &__item,
+		&__item::after,
+		&__item::before {
+			transition: width 0.35s;
+		}
+
+        &__item {
+            position: relative;
+            margin: 0 .5em;
+            padding: .5em .8em;
+            color: $white;
+            font-size: 1.6rem;
+            border: none;
+            transition: color .3s;
+
+            &::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				bottom: 0;
+				border-bottom: 2px solid $white;
+			}
+
+			&::before {
+				right: 50%;
+			}
+
+			&::after {
+				left: 50%;
+			}
+
+            &:hover {
+                color: $white;
+                background-color: transparent;
+            }
+
+			&:hover::before,
+			&:hover::after {
+				width: 40%;
+			}
+        }
+
+        &__link {
+            color: $white;
+            font-size: 3rem;
+            margin: 0 0.6em;
+        }
+
+        &__icon {
+            margin-right: 0;
+		    width: auto;
+		    font-size: 3rem;
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .header {
+        height: 75vh;
+
+        &__box {
+            flex-direction: row;
+        }
+
+        &__text-box {
+            text-align: left;
+
+            &--two {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: right;
+            }
+        }
+
+        &__title--two {
+            width: 300px;
+        }
+
+        &__text--two {
+            width: 300px;
+        }
+    }
+
+    .about {
+
+        &__box {
+            flex-direction: row;
+        }
+
+    }
+
+    .footer {
+
+        &__box {
+            flex-direction: row;
+        }
+    }
+
+    .contact {
+
+        &__info-box {
+            align-items: start;
+            flex-direction: row;
+            padding: 2em;
+        }
+
+        &__form-box {
+            width: 60%;
+        }
+    }
+}
