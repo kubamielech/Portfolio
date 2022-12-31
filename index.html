@@ -63,8 +63,8 @@
             <div class="about__box wrapper">
                 <div class="about__text-box">
                     <p class="about__title">Cześć!</p>
-                    <p class="about__subtitle">Mam na imię Kuba i jestem Front-end Developerem i UI/UX Designerem.</p>
-                    <p class="about__text">Od 2021 roku rozwijam swoją pasję jaką jest tworzenie stron internetowych. Pisanie kodu, a następnie podziwianie owoców mojej pracy sprawia mi ogromną przyjemność, dlatego mogę nazwać to moją pasją. Do tej pory oponowałem języki HTML, CSS, SASS i JS. Aktualnie uczę się korzystania z biblioteki jaką jest React.</p>
+                    <p class="about__subtitle">Mam na imię Kuba. Jestem Front-end Developerem i UI/UX Designerem.</p>
+                    <p class="about__text">Od 2021 roku rozwijam swoją pasję jaką jest tworzenie stron internetowych. Projektowanie, pisanie kodu, a następnie podziwianie mojej pracy sprawia mi ogromną przyjemność, dlatego mogę nazwać to moją pasją. Do tej pory oponowałem języki HTML, CSS, SASS i JS. Aktualnie uczę się Reacta.</p>
                     <a href="#contact" class="about__btn">Skontaktuj się</a>
                 </div>
                 <div class="about__img-box">
@@ -106,33 +106,33 @@
         </section>
         <section class="contact" id="contact">
             <div class="contact__box wrapper">
-                <div class="contact__text-box">
-                    <h2 class="contact__title">Skontaktuj się</h2>
-                    <p class="contact__subtitle">Masz jakieś pytanie? Po prostu napisz do mnie!</p>
-                </div>
                 <div class="contact__info-box">
-                    <div class="contact__info">
-                        <h3 class="contact__info-title">Informacje kontaktowe</h3>
-                        <p class="contact__info-subtitle">Napisz do mnie bezpośrednio lub skorzystaj z formularza kontaktowego.</p>
-                        <div class="contact__info-items">
-                            <p class="contact__info-text"><i class="fa-solid fa-phone"></i> +48 123 456 789</p>
-                            <p class="contact__info-text"><i class="fa-sharp fa-solid fa-envelope"></i> <a href="mailto:kubamielech4@gmail.com" class="contact__info-link">kubamielech4@gmail.com</a></p>
-                        </div>
+                    <h2 class="contact__title">Skontkatuj się!</h2>
+                    <p class="contact__text">Masz jakieś pytania?</p>
+                    <p class="contact__text">Zadzwoń, napisz lub skorzystaj z formularza kontaktowego.</p>
+                    <div class="contact__details">
+                        <p class="contact__text"><i class="fa-solid fa-phone"></i> +48 123 456 789</p>
+                        <p class="contact__text"><i class="fa-solid fa-at"></i> <a href="mailto:kubamielech4@gmail.com" class="contact__link">kubamielech4@gmail.com</a></p>
                     </div>
-                    <div class="contact__form-box">
-                        <form action="/action_page.php" class="contact__form">
-                            <p class="contact__form-title">Formularz</p>
-                            <label for="fname" class="contact__form-label">Imię</label>
+                </div>
+                <div class="contact__form-box">
+                    <form action="" class="contact__form">
+                        <div class="contact__form-item">
                             <input type="text" id="fname" name="fname" class="contact__form-input">
-                            <label for="email">Adres e-mail</label>
+                            <label for="fname" class="contact__form-label">Imię</label>
+                        </div>
+                        <div class="contact__form-item">
                             <input type="text" id="email" name="email" class="contact__form-input">
-                            <label for="msg" class="contact__form-label">Wiadomość</label>
+                            <label for="email" class="contact__form-label">Adres e-mail</label>
+                        </div>
+                        <div class="contact__form-item">
                             <textarea name="msg" id="msg" cols="30" rows="10" class="contact__form-text"></textarea>
-                            <!-- <label for="atch" class="contact__form-label">Załącznik</label> -->
-                            <input type="file" id="atch" name="arch" class="contact__form-input">
-                            <input type="submit" value="Wyślij" class="contact__form-btn">
-                          </form>
-                    </div>
+                            <label for="msg" class="contact__form-label">Wiadomość</label>
+                        </div>
+                        <!-- <label for="atch" class="contact__form-label">Załącznik</label> -->
+                        <!-- <input type="file" id="atch" name="arch" class="contact__form-input"> -->
+                        <input type="submit" value="Wyślij" class="contact__form-btn">
+                      </form>
                 </div>
             </div>
         </section>
