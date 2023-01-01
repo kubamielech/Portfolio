@@ -154,18 +154,20 @@ body {
 	}
 
 	&__text-box {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		max-width: 350px;
 		text-align: center;
 	}
 
 	&__title {
-		margin-bottom: .4em;
 		font-size: 2.4rem;
 		color: $black;
 	}
 
 	&__text {
+		margin: 1em 0;
 		color: $dark-gray;
 		font-size: 1.4rem;
 	}
@@ -179,6 +181,20 @@ body {
 	&__img {
 		width: 80%;
 		max-width: 400px;
+	}
+
+	&__btn {
+		padding: 1em 2em;
+		text-decoration: none;
+		color: $gray;
+		border: 1px solid $light-gray;
+		border-radius: 3px;
+		transition: border .3s, color .3s;
+
+		&:hover {
+			color: $black;
+			border: 1px solid $black;
+		}
 	}
 }
 
@@ -206,9 +222,10 @@ body {
 	}
 
 	&__subtitle {
-		margin: .5em 0;
+		margin: .6em 0;
 		font-size: 2rem;
 		font-weight: bold;
+		text-transform: uppercase;
 	}
 
 	&__text {
@@ -228,15 +245,16 @@ body {
 	}
 
 	&__btn {
-		margin-top: 1em;
-		padding: 1em 1.8em;
+		margin-top: 1.2em;
+		padding: 1em 2em;
 		text-decoration: none;
-		color: $black;
+		color: $gray;
 		border: 1px solid $light-gray;
 		border-radius: 3px;
-		transition: border .3s;
+		transition: border .3s, color .3s;
 
 		&:hover {
+			color: $black;
 			border: 1px solid $black;
 		}
 	}
@@ -285,6 +303,7 @@ body {
 		height: 270px;
 		background-color: $white;
 		border-radius: 3px;
+		box-shadow: -5px 5px 10px $light-gray;
 
 		&-img {
 			height: 75%;
@@ -315,12 +334,14 @@ body {
 
 	&__box {
 		display: flex;
+		flex-direction: column;
 	}
 
 	&__info-box {
 		margin-right: 2em;
-		padding: 2em;
-		width: 30%;
+		margin-bottom: 2em;
+		padding: 2em 1em;
+		width: 100%;
 		background-color: $white-smoke;
 		border: 1px solid $gray;
 	}
@@ -352,7 +373,7 @@ body {
 	}
 
 	&__form-box {
-		width: 70%;
+		width: 100%;
 	}
 
 	&__form {
@@ -368,7 +389,7 @@ body {
 		&-label {
 			position: absolute;
 			top: 21px;
-			left: 15px;
+			left: 10px;
 			padding: .2em .5em;
 			transform: translate(0, -50%);
 			transition: transform .3s, color .3s;
@@ -386,6 +407,7 @@ body {
 			padding: 1em;
 			width: 100%;
 			height: 42px;
+			color: $black;
 			border: 1px solid $gray;
 			background-color: transparent;
 
@@ -396,11 +418,13 @@ body {
 
 		&-text {
 			width: 100%;
-			max-width: 100%;
 			min-width: 100%;
+			max-width: 100%;
+			min-height: 42px;
 			padding: 1em;
 			border: 1px solid $gray;
 			background-color: transparent;
+			resize: vertical;
 
 			&:focus {
 				outline: none;
@@ -409,13 +433,15 @@ body {
 
 		&-btn {
 			padding: 0.5em 0;
+			color: $black;
 			background-color: $white-smoke;
 			border: 1px solid $gray;
 			font-size: 1.6rem;
-			transition: background-color .3s;
+			transition: color .3s, background-color .3s;
 			
 			&:hover {
-				background-color: $light-gray;
+				color: $dark-gray;
+				background-color: $primary;
 				cursor: pointer;
 			}
 		}

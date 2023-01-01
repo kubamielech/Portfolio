@@ -84,25 +84,16 @@
 
         &__text-box {
             text-align: left;
+            align-items: flex-start;
 
-            &--two {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            &--right {
                 text-align: right;
+                align-items: flex-end;
             }
         }
 
         &__text {
             font-size: 1.6rem;
-        }
-
-        &__title--two {
-            width: 300px;
-        }
-
-        &__text--two {
-            width: 300px;
         }
 
         &__img {
@@ -124,6 +115,23 @@
             font-size: 2.4rem;
         }
 
+    }
+
+    .contact {
+
+        &__box {
+            flex-direction: row;
+        }
+
+        &__info-box {
+            padding: 3em 2em;
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        &__form-box {
+            width: 70%;
+        }
     }
 
     .footer {
