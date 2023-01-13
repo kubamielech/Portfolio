@@ -20,18 +20,23 @@
 
     <header class="header">
         <div class="header__box wrapper">
-            <div class="header__text-box">
-                <h1 class="header__title">Front-end Developer</h1>
-                <p class="header__text">Tworzę strony internetowe korzystając z najnowszych rozwiązań i technologii.</p>
+            <div class="header__text-box header__text-box--left">
+                <h1 class="header__title header__title--left">Front-end <span>Developer</span></h1>
+                <p class="header__text">Tworzę profesjonalne strony internetowe korzystając z najnowszych rozwiązań.</p>
                 <a href="#about" class="header__btn">Poznaj mnie</a>
             </div>
             <div class="header__img-box">
-                <img src="./dist/img/funny.png" alt="" class="header__img">
+                <img src="./dist/img/funny.png" alt="moja twarz" class="header__img">
             </div>
             <div class="header__text-box header__text-box--right">
-                <h1 class="header__title">UI/UX Designer</h1>
+                <h1 class="header__title header__title--right">UI/UX <span>Designer</span></h1>
                 <p class="header__text">Projektuje nowoczesne i świetnie wyglądające strony internetowe.</p>
                 <a href="#portfolio" class="header__btn header__btn--special">Zobacz moje prace</a>
+            </div>
+            <div class="header__text-box header__text-box--mobile">
+                <h1 class="header__title">Front-end Developer i UI/UX Designer</h1>
+                <p class="header__text">Projektuje i tworzę profesjonalnie, nowoczesne i świetnie wyglądające strony internetowe.</p>
+                <a href="#about" class="header__btn">Poznaj mnie</a>
             </div>
         </div>
     </header>
@@ -41,12 +46,15 @@
             <div class="about__box wrapper">
                 <div class="about__text-box">
                     <p class="about__title">Cześć!</p>
-                    <p class="about__subtitle">Mam na imię Kuba. Jestem Front-end Developerem i UI/UX Designerem.</p>
-                    <p class="about__text">Od 2021 roku rozwijam swoją pasję jaką jest tworzenie stron internetowych. Projektowanie, pisanie kodu, a następnie podziwianie mojej pracy sprawia mi ogromną przyjemność, dlatego mogę nazwać to moją pasją. Do tej pory oponowałem języki HTML, CSS, SASS i JS. Aktualnie uczę się Reacta.</p>
-                    <a href="#contact" class="about__btn">Skontaktuj się</a>
+                    <p class="about__subtitle">Mam na imię <span>Kuba</span>. Jestem Front-end Developerem i UI/UX Designerem.</p>
+                    <p class="about__text">Od 2021 roku rozwijam swoją pasję jaką jest tworzenie stron internetowych. Projektowanie i pisanie kodu sprawia mi przyjemność i daje mi ogromną satysfakcje. Szybką się uczę i lubię pracę w zespole. Jestem otwarty na wszelkie propozycje współpracy. Języki jakie wykorzystuje do tworzenia moich stron to: HTML, CSS, SASS oraz JS. Moim aktualnym celem jest nauka Reacta oraz innych frameworków.</p>
+                    <div class="about__btns">
+                        <a href="#portfolio" class="about__btn">Zobacz moje prace</a>
+                        <a href="#contact" class="about__btn about__btn--special">Skontaktuj się</a>
+                    </div>
                 </div>
                 <div class="about__img-box">
-                    <img src="./dist/img/okay.png" alt="" class="about__img">
+                    <img src="./dist/img/computer.png" alt="ja" class="about__img">
                 </div>
             </div>
         </section>
@@ -58,27 +66,27 @@
                     <div class="portfolio__bar"></div>
                 </div>
                 <div class="portfolio__items">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item-img"></div>
+                    <a class="portfolio__item" href="https://github.com/kubamielech/My-Study-Buddy" target="_blank" rel="noopener">
+                        <div class="portfolio__item-img-box"><img src="./dist/img/study-buddy.png" alt="Study Buddy" class="portfolio__item-img"></div>
                         <div class="portfolio__item-text-box">
                             <p class="portfolio__item-title">My Study Buddy</p>
                             <p class="portfolio__item-text">React project</p>
                         </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__item-img"></div>
+                    </a>
+                    <a class="portfolio__item" href="404.html">
+                        <div class="portfolio__item-img-box"></div>
                         <div class="portfolio__item-text-box">
                             <p class="portfolio__item-title">Diamonds, Gold & Money</p>
                             <p class="portfolio__item-text">Grid project</p>
                         </div>
-                    </div>
-                    <div class="portfolio__item">
-                        <div class="portfolio__item-img"></div>
+                    </a>
+                    <a class="portfolio__item" href="#">
+                        <div class="portfolio__item-img-box"></div>
                         <div class="portfolio__item-text-box">
                             <p class="portfolio__item-title">Tropical Paradise</p>
                             <p class="portfolio__item-text">Flexbox project</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -88,13 +96,14 @@
                     <h2 class="contact__title">Skontkatuj się!</h2>
                     <p class="contact__text">Masz jakieś pytania?</p>
                     <p class="contact__text">Zadzwoń, napisz lub skorzystaj z formularza kontaktowego.</p>
+                    <div class="contact__item"><i class="fa-regular fa-envelope"></i></div>
                     <div class="contact__details">
                         <p class="contact__text"><i class="fa-solid fa-phone"></i><a href="tel:+48123456789" class="contact__link">+48 123 456 789</a></p>
-                        <p class="contact__text"><i class="fa-solid fa-at"></i><a href="mailto:kubamielech4@gmail.com" class="contact__link">kubamielech4@gmail.com</a></p>
+                        <p class="contact__text"><i class="fa-solid fa-at"></i><a href="mailto:kontakt@mail.pl" class="contact__link">kontakt@mail.pl</a></p>
                     </div>
                 </div>
                 <div class="contact__form-box">
-                    <form action="" class="contact__form">
+                    <form action="#" class="contact__form">
                         <div class="contact__form-item">
                             <input type="text" id="fname" name="fname" class="contact__form-input">
                             <label for="fname" class="contact__form-label">Imię</label>

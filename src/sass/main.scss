@@ -94,7 +94,7 @@ body {
 		border-bottom-left-radius: 8px;
 		transform: scaleX(0%);
 		transform-origin: 100% -50%;
-		transition: transform .3s, opacity .2s;
+		transition: transform 0.3s, opacity 0.2s;
 		opacity: 0;
 		z-index: 1;
 
@@ -144,11 +144,11 @@ body {
 	padding: 5em 1em;
 	height: 90vh;
 	background-color: $white;
-	
+
 	&__box {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 		height: 100%;
 	}
@@ -159,15 +159,31 @@ body {
 		width: 100%;
 		max-width: 350px;
 		text-align: center;
+
+		&--left {
+			display: none;
+		}
+
+		&--right {
+			display: none;
+		}
 	}
 
 	&__title {
 		font-size: 2.4rem;
 		color: $black;
+
+		// &--left span {
+		// 	color: $dark-blue;
+		// }
+
+		// &--right span {
+		// 	color: $purple;
+		// }
 	}
 
 	&__text {
-		margin: 1em 0;
+		margin: 1em 0 1.3em;
 		color: $dark-gray;
 		font-size: 1.4rem;
 	}
@@ -186,14 +202,26 @@ body {
 	&__btn {
 		padding: 1em 2em;
 		text-decoration: none;
-		color: $gray;
-		border: 1px solid $light-gray;
-		border-radius: 3px;
-		transition: border .3s, color .3s;
+		color: $blue;
+		border: 1px solid $blue;
+		border-radius: 5px;
+		transition: border 0.3s, color 0.3s, background-color 0.3s;
 
 		&:hover {
-			color: $black;
-			border: 1px solid $black;
+			color: $white;
+			border: 1px solid $dark-blue;
+			background-color: $dark-blue;
+		}
+
+		&--special {
+			color: $pink;
+			border: 1px solid $pink;
+
+			&:hover {
+				color: $white;
+				background-color: $purple;
+				border: 1px solid $purple;
+			}
 		}
 	}
 }
@@ -222,11 +250,15 @@ body {
 	}
 
 	&__subtitle {
-		margin: .6em 0;
+		margin: 0.6em 0;
 		font-size: 2rem;
 		font-weight: bold;
 		text-transform: uppercase;
 	}
+
+	// &__subtitle span {
+	// 	color: $pink;
+	// }
 
 	&__text {
 		line-height: 22px;
@@ -244,18 +276,36 @@ body {
 		max-width: 400px;
 	}
 
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	&__btn {
-		margin-top: 1.2em;
+		margin-top: 1em;
+		margin-right: 1em;
 		padding: 1em 2em;
 		text-decoration: none;
-		color: $gray;
-		border: 1px solid $light-gray;
-		border-radius: 3px;
-		transition: border .3s, color .3s;
+		color: $blue;
+		border: 1px solid $blue;
+		border-radius: 5px;
+		transition: border 0.3s, color 0.3s, background-color 0.3s;
 
 		&:hover {
-			color: $black;
-			border: 1px solid $black;
+			color: $white;
+			border: 1px solid $dark-blue;
+			background-color: $dark-blue;
+		}
+
+		&--special {
+			color: $pink;
+			border: 1px solid $pink;
+
+			&:hover {
+				color: $white;
+				background-color: $purple;
+				border: 1px solid $purple;
+			}
 		}
 	}
 }
@@ -267,7 +317,7 @@ body {
 
 	&__text-box {
 		display: flex;
-		justify-content:  center;
+		justify-content: center;
 		align-items: center;
 	}
 
@@ -299,16 +349,29 @@ body {
 	&__item {
 		margin: 1em;
 		padding: 1em;
-		width: 360px;
-		height: 270px;
+		width: 400px;
+		height: 300px;
 		background-color: $white;
-		border-radius: 3px;
-		box-shadow: -5px 5px 10px $light-gray;
+		text-decoration: none;
+		border-radius: 5px;
+		box-shadow: 5px 5px 10px $light-gray;
+		transition: box-shadow 0.3s;
+		cursor: pointer;
 
-		&-img {
+		&:hover {
+			box-shadow: -5px -5px 10px $light-gray;
+		}
+
+		&-img-box {
 			height: 75%;
 			width: 100%;
 			background-color: $white-smoke;
+			overflow: hidden;
+		}
+
+		&-img {
+			height: 100%;
+			width: 100%;
 		}
 
 		&-text-box {
@@ -338,17 +401,34 @@ body {
 	}
 
 	&__info-box {
+		position: relative;
 		margin-right: 2em;
 		margin-bottom: 2em;
 		padding: 2em 1em;
 		width: 100%;
-		background-color: $white-smoke;
+		color: $white;
+		background-color: $purple;
 		border: 1px solid $gray;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	&__item {
+		position: absolute;
+		top: 5%;
+		left: 20%;
+		font-size: 400px;
+		transform: rotate(20deg);
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	&__text-box {
+		z-index: 2;
 	}
 
 	&__title {
 		margin-bottom: 1em;
-		color: $black;
 		text-transform: uppercase;
 	}
 
@@ -358,7 +438,6 @@ body {
 
 	&__text {
 		margin-bottom: 1em;
-		color: $black;
 	}
 
 	&__text .fa-solid {
@@ -369,7 +448,11 @@ body {
 	&__link {
 		margin-top: 1em;
 		text-decoration: none;
-		color: $black;
+		color: $white;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__form-box {
@@ -390,18 +473,18 @@ body {
 			position: absolute;
 			top: 21px;
 			left: 10px;
-			padding: .2em .5em;
+			padding: 0.2em 0.5em;
 			transform: translate(0, -50%);
-			transition: transform .3s, color .3s;
+			transition: transform 0.3s, color 0.3s;
 			color: $gray;
 			background-color: $primary;
-			
+
 			&--active {
 				color: $black;
 				transform: translate(15px, -33px);
 			}
 		}
-		
+
 		&-input {
 			margin-bottom: 1em;
 			padding: 1em;
@@ -410,9 +493,11 @@ body {
 			color: $black;
 			border: 1px solid $gray;
 			background-color: transparent;
+			border-radius: 5px;
 
 			&:focus {
 				outline: none;
+				border-bottom: 2px solid $purple;
 			}
 		}
 
@@ -425,25 +510,65 @@ body {
 			border: 1px solid $gray;
 			background-color: transparent;
 			resize: vertical;
+			border-radius: 5px;
 
 			&:focus {
 				outline: none;
+				border-bottom: 2px solid $purple;
 			}
 		}
 
 		&-btn {
-			padding: 0.5em 0;
-			color: $black;
-			background-color: $white-smoke;
+			padding: 1em 0;
+			color: $white;
+			background-color: $purple;
 			border: 1px solid $gray;
 			font-size: 1.6rem;
-			transition: color .3s, background-color .3s;
-			
+			transition: color 0.3s, background-color 0.3s;
+			border-radius: 5px;
+
 			&:hover {
-				color: $dark-gray;
-				background-color: $primary;
+				color: $white;
+				background-color: $dark-blue;
 				cursor: pointer;
 			}
+		}
+	}
+}
+
+// ERROR
+.error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		margin-bottom: .8em;
+		font-weight: bold;
+		font-size: 3.2rem;
+		color: $black;
+	}
+
+	&__link {
+		padding: 1em 2em;
+		color: $black;
+		text-decoration: none;
+		border: 1px solid $black;
+		border-radius: 5px;
+		transition: color .3s, background-color .3s;
+
+		&:hover {
+			color: $white;
+			background-color: $black;
 		}
 	}
 }
@@ -473,7 +598,7 @@ body {
 }
 
 .footer a {
-	transition: color .3s;
+	transition: color 0.3s;
 
 	&:hover {
 		color: $white;
@@ -483,4 +608,4 @@ body {
 @import './small';
 @import './medium';
 @import './large';
-@import './xlarge'
+@import './extra-large';

@@ -80,15 +80,25 @@
 
         &__box {
             flex-direction: row;
+            justify-content: space-between;
         }
 
         &__text-box {
             text-align: left;
             align-items: flex-start;
 
+            &--left {
+                display: flex;
+            }
+
             &--right {
+                display: flex;
                 text-align: right;
                 align-items: flex-end;
+            }
+
+            &--mobile {
+                display: none;
             }
         }
 
