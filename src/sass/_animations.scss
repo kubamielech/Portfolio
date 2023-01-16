@@ -1,19 +1,12 @@
-@keyframes nav-animation {
-    from {
-        transform: translateY(-150%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes scroll-btn-animation {
+@keyframes arrow-animation {
     from {
         opacity: 0;
+        transform: translateX(-20px);
     }
 
     to {
-        opacity: 1;
+        color: $gray;
+        opacity: .7;
+        transform: translateX(0);
     }
 }
