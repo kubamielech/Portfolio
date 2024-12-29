@@ -1,2 +1,2 @@
-# Portfolio
-live: https://kubamielech.github.io/My-Portfolio/
+# portfolio
+live: https://kubamielech.github.io/portfolio/
